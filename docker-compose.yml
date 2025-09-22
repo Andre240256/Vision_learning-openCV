@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  virtualpaint:
+    build: .
+    container_name: virtualpaint-app
+    privileged: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - XAUTHORITY=/tmp/.docker.xauth
+      - QT_SCALE_FACTOR=1
+      - GDK_SCALE=1
+      - GDK_DPI_SCALE=1
+    volumes:
+      # Mount X11 socket for GUI display
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      # Mount X11 authorization
+      - ${HOME}/.Xauthority:/tmp/.docker.xauth:rw
+      # Mount camera devices
+      - /dev/video0:/dev/video0
+      # Optional: mount additional camera devices if available
+      - /dev/video1:/dev/video1
+      - /dev/video2:/dev/video2
+    devices:
+      # Grant access to video devices
+      - /dev/video0:/dev/video0
+    network_mode: host
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
