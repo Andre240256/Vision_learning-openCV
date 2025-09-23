@@ -32,9 +32,14 @@ find_package(OpenCV REQUIRED)
 #     chapter7.cpp
 # )
 
+# add_executable(
+#     exec8
+#     chapter8.cpp
+# )
+
 add_executable(
-    exec8
-    chapter8.cpp
+    exec
+    license_plate_detection.cpp
 )
 
 
@@ -44,4 +49,5 @@ add_executable(
 # target_link_libraries(exec5 ${OpenCV_LIBS})
 # target_link_libraries(exec6 ${OpenCV_LIBS})
 # target_link_libraries(exec7 ${OpenCV_LIBS})
-target_link_libraries(exec8 ${OpenCV_LIBS})
+# target_link_libraries(exec8 ${OpenCV_LIBS})
+target_link_libraries(exec ${OpenCV_LIBS})

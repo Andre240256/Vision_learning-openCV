@@ -13,6 +13,6 @@ echo "compilação finalizada"
 echo "executando programa teste"
 
 
-./build/src/exec8
+./build/src/exec
 
 cd ../..
