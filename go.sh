@@ -3,7 +3,7 @@
 
 set -e
 
-cd ~/teste
+cd ~/CompVision
 
 echo "iniciando a compilação do projeto com CMake"
 

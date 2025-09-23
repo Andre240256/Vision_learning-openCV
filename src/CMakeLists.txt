@@ -32,15 +32,11 @@ find_package(OpenCV REQUIRED)
 #     chapter7.cpp
 # )
 
-# add_executable(
-#     exec8
-#     chapter8.cpp
-# )
-
 add_executable(
-    virtualPaint
-    virtualPaint.cpp
+    exec8
+    chapter8.cpp
 )
+
 
 # target_link_libraries(exec1 ${OpenCV_LIBS})
 # target_link_libraries(exec2 ${OpenCV_LIBS})
@@ -48,5 +44,4 @@ add_executable(
 # target_link_libraries(exec5 ${OpenCV_LIBS})
 # target_link_libraries(exec6 ${OpenCV_LIBS})
 # target_link_libraries(exec7 ${OpenCV_LIBS})
-# target_link_libraries(exec8 ${OpenCV_LIBS})
-target_link_libraries(virtualPaint ${OpenCV_LIBS})
+target_link_libraries(exec8 ${OpenCV_LIBS})
