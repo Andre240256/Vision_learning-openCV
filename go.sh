@@ -3,7 +3,7 @@
 
 set -e
 
-cd ~/teste
+cd ~/CompVision
 
 echo "iniciando a compilação do projeto com CMake"
 
@@ -13,6 +13,6 @@ echo "compilação finalizada"
 echo "executando programa teste"
 
 
-./build/src/exec8
+./build/src/documentScanner
 
 cd ../..

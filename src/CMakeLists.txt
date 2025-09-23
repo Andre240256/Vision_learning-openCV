@@ -38,8 +38,8 @@ find_package(OpenCV REQUIRED)
 # )
 
 add_executable(
-    virtualPaint
-    virtualPaint.cpp
+    documentScanner
+    documentScanner.cpp
 )
 
 # target_link_libraries(exec1 ${OpenCV_LIBS})
@@ -49,4 +49,4 @@ add_executable(
 # target_link_libraries(exec6 ${OpenCV_LIBS})
 # target_link_libraries(exec7 ${OpenCV_LIBS})
 # target_link_libraries(exec8 ${OpenCV_LIBS})
-target_link_libraries(virtualPaint ${OpenCV_LIBS})
+target_link_libraries(documentScanner ${OpenCV_LIBS})
